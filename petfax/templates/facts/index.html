@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>UserFax</h1>                              
-
+    <div class="container">
+        <H1>UserFax</H1>
+        {% for fact in facts %}
+            <H4>Submitted by {{ fact.submitter }}</H4>
+            {{ fact.fact }}
+        {% endfor %}
+    </div>
 </body>
+
 </html>
